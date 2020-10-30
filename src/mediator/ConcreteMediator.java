@@ -14,9 +14,10 @@ public class ConcreteMediator implements MediatorInterface {
 	}
 
 	@Override
-	public void notify(Colleague sender) {
-		int index = this.colleagues.indexOf(sender); //identifica se colleague pertence ao mediador
-		if(index!=-1)
-			System.out.println("Alguma coisa...");
+	public void notify(Object sender, String mensagem, String data) {
+		// TODO Auto-generated method stub
+		
 	}
+
+
 }

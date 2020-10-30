@@ -5,25 +5,8 @@ import java.util.ArrayList;
 
 public class Subject implements SubjectInterface {
 
-	private String name;
 	private String state;
-	private ArrayList<Observer> observers;
-	
-	
-
-	public Subject(String name) {
-		this.name = name;
-		this.observers = new ArrayList<Observer>();
-	}
-
-	
-	public String getName() {
-		return name;
-	}
-
-	public void setName(String name) {
-		this.name = name;
-	}
+	private ArrayList<Observer> observers;	
 
 	public String getState() {
 		return state;

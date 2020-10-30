@@ -21,8 +21,6 @@ public class Canal implements SubjectInterface {
 		return name;
 	}
 
-
-
 	public void setName(String name) {
 		this.name = name;
 	}
@@ -61,7 +59,7 @@ public class Canal implements SubjectInterface {
 		}	
 	}
 	
-	public void sendNote(String info) {
+	public void sendVideo(String info) {
 		this.state = info;	
 		this.notifyObserver();
 	}

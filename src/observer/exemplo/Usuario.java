@@ -17,18 +17,19 @@ public class Usuario implements ObserverInterface {
 		}
 		
 		public void subscribe(Canal canal) {
+			
 			if(!this.canais.contains(canal)) {
 				canal.addObserver(this);
 				this.canais.add(canal);
 			}
 		}
 		
-		public void unsubscribe(Canal canal) {
-			int index = this.canais.indexOf(canal);
-			
-			if(index!=-1) {
-				this.canais.get(index).removeObserver(this);
-				this.canais.remove(index);
+		public void unsubscribe(String nomeCanal) {		
+			for(Canal itemCanal: this.canais) {
+				if(itemCanal.getName().equals(nomeCanal)) {
+					this.canais.remove(itemCanal);
+					break;
+				}		
 			}
 		}
 		

@@ -9,6 +9,15 @@ public abstract class Colleague {
 		this.mediator.addColleague(this);
 	}
 
+	public ConcreteMediator getMediator() {
+		return mediator;
+	}
+
+	public void setMediator(ConcreteMediator mediator) {
+		this.mediator = mediator;
+	}
+	
+
 	//ADICIONAR OPERAÇÕES
 	
 }

@@ -8,20 +8,21 @@ public class Main {
 	public static void main(String[] args) {
 		//CANAIS
 		Canal gafanhoto = new Canal("Banco de Dados");
+		Canal gafanhoto2 = new Canal("ÉDÊ");
 		
 		//USUARIOS
 		Usuario nirton = new Usuario("nirton");
 
-		
-		
+		nirton.subscribe(gafanhoto2);
 		nirton.subscribe(gafanhoto);
 		
-		gafanhoto.sendNote("então, pessoal...");
+		gafanhoto.sendVideo("então, pessoal...");
 		
-		nirton.unsubscribe(gafanhoto);
+		gafanhoto2.sendVideo("então, pessoal..22.");
 		
-		gafanhoto.sendNote("Mas já vai embora?!");
+		nirton.unsubscribe("Banco de Dados");
 		
+		gafanhoto.sendVideo("Mas já vai embora?!");
 		
 	}
 
