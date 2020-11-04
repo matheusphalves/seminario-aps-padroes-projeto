@@ -2,9 +2,6 @@ package mediator.exemplo;
 
 import java.util.ArrayList;
 
-import mediator.Colleague;
-import mediator.MediatorInterface;
-
 public class ChatSala implements MediatorInterface {
 
 	private ArrayList<Pessoa> participantes;
@@ -26,9 +23,9 @@ public class ChatSala implements MediatorInterface {
 	}
 
 	@Override
-	public void notify(Object remetente,String mensagem, String destinatario) {
+	public void notify(Pessoa remetente,String mensagem, String destinatario) {
 		Pessoa dest =  this.buscarParticipante(destinatario);
-		Pessoa origin = (Pessoa) remetente;
+		Pessoa origin = remetente;
 		
 		if(this.validar(origin, dest)) {
 			dest.receberMensagem(origin.getNome(), mensagem);
@@ -46,8 +43,7 @@ public class ChatSala implements MediatorInterface {
 	}
 
 	public boolean validar(Pessoa pessoa1, Pessoa pessoa2) {
-		boolean result = false;
-		
+		boolean result = false;	
 		if(pessoa2!=null) {
 			if(pessoa1 instanceof PessoaMembro && pessoa2 instanceof PessoaNaoMembro) {
 				result = true;

@@ -1,18 +1,14 @@
 package mediator.exemplo;
 
-import mediator.Colleague;
-import mediator.ConcreteMediator;
-
-public abstract class Pessoa {
+public abstract class Pessoa  {
 
 	private String nome;
-	private ChatSala mediator;
+	private MediatorInterface mediator;
 
-	public Pessoa(String nome, ChatSala mediator) {
+	public Pessoa(String nome, MediatorInterface mediator) {
 		this.nome = nome;
 		this.mediator = mediator;
 	}
-	
 	
 	public String getNome() {
 		return nome;
@@ -22,15 +18,14 @@ public abstract class Pessoa {
 		this.nome = nome;
 	}
 
-	public ChatSala getMediator() {
+	public MediatorInterface getMediator() {
 		return mediator;
 	}
 
-	public void setMediator(ChatSala mediator) {
+	public void setMediator(MediatorInterface mediator) {
 		this.mediator = mediator;
 	}
-
-
+	
 	public void enviarMensagem(String mensagem, String nomePessoa) {
 		this.getMediator().notify(this ,mensagem, nomePessoa);
 	}

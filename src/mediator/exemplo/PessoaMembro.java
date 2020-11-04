@@ -2,7 +2,7 @@ package mediator.exemplo;
 
 public class PessoaMembro extends Pessoa {
 
-	public PessoaMembro(String nome, ChatSala mediator) {
+	public PessoaMembro(String nome, MediatorInterface mediator) {
 		super(nome, mediator);
 	}
 

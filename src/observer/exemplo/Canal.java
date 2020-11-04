@@ -2,7 +2,6 @@ package observer.exemplo;
 
 import java.util.ArrayList;
 
-import observer.Observer;
 import observer.ObserverInterface;
 import observer.SubjectInterface;
 

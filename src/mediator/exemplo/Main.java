@@ -14,8 +14,8 @@ public class Main {
 		chat.adicionarParticipante(richard);
 		chat.adicionarParticipante(biriloVip);
 		
-		
 		richard.enviarMensagem("Minha cocada", "birilo");
+		biriloVip.enviarMensagem("Tem não!", "richard");
 	}
 
 }
