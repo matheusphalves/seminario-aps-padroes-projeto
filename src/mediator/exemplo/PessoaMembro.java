@@ -9,9 +9,9 @@ public class PessoaMembro extends Pessoa {
 	@Override
 	public void receberMensagem(String remetente, String cartinha) {
 		if(remetente!=null)
-			System.out.println(this.getNome() + " recebeu do não membro: " + remetente + "\n" + cartinha);
+			System.out.println("> " + this.getNome() + " recebeu do não membro: " + remetente + "\n" + cartinha + "\n");
 		else
-			System.out.println(cartinha);
+			System.out.println("> "+ this.getNome() + ": Membros não podem trocar mensagens entre si\n" + cartinha);
 		
 	}
 

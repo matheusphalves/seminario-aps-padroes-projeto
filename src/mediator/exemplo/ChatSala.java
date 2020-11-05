@@ -53,5 +53,4 @@ public class ChatSala implements MediatorInterface {
 		}
 		return result;
 	}
-	
 }

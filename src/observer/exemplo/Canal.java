@@ -9,11 +9,11 @@ public class Canal implements SubjectInterface {
 	
 	private String name;
 	private String state;
-	private ArrayList<Usuario> subscribers;
+	private ArrayList<ObserverInterface> subscribers;
 	
 	public Canal(String name) {
 		this.name = name;
-		this.subscribers = new ArrayList<Usuario>();
+		this.subscribers = new ArrayList<ObserverInterface>();
 	}
 
 	public String getName() {
@@ -45,15 +45,15 @@ public class Canal implements SubjectInterface {
 	}
 
 	@Override
-	public void removeObserver(ObserverInterface observer) {
-		if(this.subscribers.size()>1)
-			this.subscribers.remove((Usuario) observer);	
-		
-	}
+    public void removeObserver(ObserverInterface observer) {
+        if(this.subscribers.contains(observer))
+            this.subscribers.remove((Usuario) observer);
+
+    }
 
 	@Override
 	public void notifyObserver() {
-		for(Usuario obs: this.subscribers) {
+		for(ObserverInterface obs: this.subscribers) {
 			obs.update(this);
 		}	
 	}
