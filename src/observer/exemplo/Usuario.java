@@ -5,10 +5,8 @@ import observer.SubjectInterface;
 
 public class Usuario implements ObserverInterface {
 
-	
 		private String usuario;
-		private Canal canal;
-		
+		private Canal canal;	
 		
 		public Usuario(String name, Canal canal) {
 			this.usuario = name;
